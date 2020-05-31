@@ -10,23 +10,23 @@
 					</tr>
 					<tr>
 						<td width="55%">Ваш ник</td>
-						<td width="35%"><input type="text" name="T1" size="20"></td>
+						<td width="35%"><input type="text" name="T1" size="20" value="<?echo $_POST["T1"];?>"></td>
 					</tr>
 					<tr>
 						<td width="55%">Ваш пароль</td>
-						<td width="35%"><input type="password" name="T2" size="20"></td>
+						<td width="35%"><input type="password" name="T2" size="20" value="<?echo $_POST["T2"];?>">></td>
 					</tr>
 					<tr>
 						<td width="55%">Ваш пароль еще раз</td>
-						<td width="35%"><input type="password" name="T3" size="20"></td>
+						<td width="35%"><input type="password" name="T3" size="20" value="<?echo $_POST["T3"];?>">></td>
 					</tr>
 					<tr>
 						<td width="55%">Фамилия</td>
-						<td width="35%"><input type="text" name="T4" size="20"></td>
+						<td width="35%"><input type="text" name="T4" size="20" value="<?echo $_POST["T4"];?>">></td>
 					</tr>
 					<tr>
 						<td width="55%">Имя</td>
-						<td width="35%"><input type="text" name="T5" size="20"></td>
+						<td width="35%"><input type="text" name="T5" size="20" value="<?echo $_POST["T5"];?>">></td>
 					</tr>
 					<tr>
 						<td width="55%">Пол</td>
