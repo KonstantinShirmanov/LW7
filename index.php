@@ -11,6 +11,7 @@
 	<div id="wrapper">
     <?include ('title.php')?>;
     <?include ('left.php')?>
+    <?include ('right.php')?>
     <?include ('footer.php')?>
 
     </div>    
