@@ -24,22 +24,31 @@
 			</tr>
 			<tr>
 				<td width="26%"><span lang="ru">Первое число</span></td>
-				<td width="29%"><input type="text" name="T7" size="20"></td>
+				<td width="29%"><input type="text" name="T7" size="20" value="<?echo $_POST['T7'];?>"></td>
 				<td width="41%">Тип расчета</td>
 			</tr>
 			<tr>
 				<td width="26%"><span lang="ru">Второе число</span></td>
-				<td width="29%"><input type="text" name="T8" size="20"></td>
+				<td width="29%"><input type="text" name="T8" size="20" value="<?echo $_POST['T8'];?>"></td>
 				<td width="41%"><select size="1" name="D2">
-				<option>сумма</option>
-				<option>среднее</option>
-				<option>максимальное</option>
-				<option>минимальное</option>
+				<option <?if ($_POST['D2']=='сумма') echo 'selected'; else echo'';?>>сумма</option>
+				<option <?if ($_POST['D2']=='среднее') echo 'selected'; else echo'';?>>среднее</option>
+				<option <?if ($_POST['D2']=='максимальное') echo 'selected'; else echo'';?>>максимальное</option>
+				<option <?if ($_POST['D2']=='минимальное') echo 'selected'; else echo'';?>>минимальное</option>
 				</select></td>
 			</tr>
 			<tr>
 				<td width="26%"><span lang="ru">Ответ</span></td>
-				<td width="29%"><input type="text" name="T9" size="20"></td>
+				<td width="29%"><input type="text" name="T9" size="20"  value=
+					"<?if ($_POST['D2']=='сумма') echo $_POST['T7']+$_POST['T8'];  
+					 else if ($_POST['D2']=='среднее') echo ($_POST['T7']+$_POST['T8'])/2;
+					 else if ($_POST['D2']=='максимальное')
+
+					  if ($_POST['T7'] > $_POST['T8']) echo $_POST['T7'];                                          
+					  else echo $_POST['T8']; 
+
+                     else if ($_POST['D2']=='минимальное') if ($_POST['T7']<$_POST['T8'])echo $_POST['T7'];
+                     else echo $_POST['T8'];?>"></td>
 				<td width="41%">&nbsp;</td>
 			</tr>
 			<tr>
